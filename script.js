@@ -25,9 +25,9 @@ module.exports = new Script({
 
             function updateSilent() {
                 switch (upperText) {
-                    case "CONNECT ME":
+                    case "CHET":
                         return bot.setProp("silent", true);
-                    case "DISCONNECT":
+                    case "CHETBOT":
                         return bot.setProp("silent", false);
                     default:
                         return Promise.resolve();
@@ -44,7 +44,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say(`Let me get my supervisor on the line, okay?.`).then(() => 'speak');
+                    return bot.say(`Let me get my supervisor on the line, okay? Just type Chet.`).then(() => 'speak');
                 }
 
                 var response = scriptRules[upperText];
